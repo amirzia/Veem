@@ -6,8 +6,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v3
     - name: build tests
-      run: ls -lhtra | tee && mkdir build && cmake -B build/ -S . && cd build && make
+      run:  cmake -S . -B build && cmake --build build
     - name: run tests
-      run: ./build/tests/main_test
+      run: ctest --test-dir build/tests
 
