@@ -1,0 +1,13 @@
+name: veem-workflow
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: build tests
+      run: mkdir build && cd build && cmake .. && make
+    - name: run tests
+      run: ./build/tests/main_test
+
