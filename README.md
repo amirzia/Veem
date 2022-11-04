@@ -3,16 +3,15 @@ A text editor similar to `VIM` for mortal people.
 
 # Compile
 ```
-mkdir build
-cd build
-cmake .. && make
+cmake -S . -B build
+cmake --build build
 ```
 
 # Usage
 Start the program with `./out`. To exit, issue `<CTRL-C>`.
 
 # Test
-After compiling, issue `./build/tests/main_test`
+After compiling, issue `ctest --test-dir build/tests`
 
 # Features to be implemented
 - [ ] Read, edit, and save files.
