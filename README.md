@@ -2,10 +2,17 @@
 A text editor similar to `VIM` for mortal people.
 
 # Compile
-`g++ -std=c++20 -lncurses main.cc -o out`
+```
+mkdir build
+cd build
+cmake .. && make
+```
 
 # Usage
 Start the program with `./out`. To exit, issue `<CTRL-C>`.
+
+# Test
+After compiling, issue `./build/tests/main_test`
 
 # Features to be implemented
 - [ ] Read, edit, and save files.
