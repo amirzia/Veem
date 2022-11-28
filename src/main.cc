@@ -3,14 +3,7 @@
 
 #include "text.hpp"
 
-void test_text() {
-	LinkedTest txt{ "salam" };
-	std::cout << txt.get_whole_text();
-}
-
 int main() {
-	test_text();
-	
 	int ichar; // input char
 
 	initscr(); // start curses mode
