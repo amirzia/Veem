@@ -3,7 +3,17 @@
 
 #include "text.hpp"
 
-int main() {
+void print_help() {
+	std::cout << "Usage: ./veem [file_name]" << std::endl;
+}
+
+int main(int argc, char **argv) {
+
+	if (argc != 2) {
+		print_help();
+		exit(1);
+	}
+
 	int ichar; // input char
 
 	initscr(); // start curses mode
